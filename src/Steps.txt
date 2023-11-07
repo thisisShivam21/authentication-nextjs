@@ -1,0 +1,65 @@
+# Tech Stack 
+
+-> Next Js
+-> MongoDB
+-> Mongoose
+-> Nodemail
+
+Dependencies
+
+1. npm i axios bcryptjs jsonwebtoken nodemailer react-hot-toast mongoose
+
+
+Steps: 
+
+1. Setting up the files and folder structure: 
+    > app
+        > api
+            > users
+                > login
+                    - route.ts
+                > signup
+                    - route.ts
+        > login
+            - page.tsx
+        > signup
+            - page.tsx
+        > profile
+            > [id]
+                - page.tsx
+            - page.tsx
+    > helpers
+    > models
+
+2. Creating .env variables: mongo_url, TOKEN_SECRET, domain
+
+3. Database connection setup : > dbConfig
+                                    - dgConfig.ts
+
+4. Setting up the signup (page.tsx) : 
+                                > "use client" is used to make the page client side and to get the information from the frontend/client side to render at the server side. 
+                                > useState to get the user information and save it.
+                                > onSignup async function to communicate with the database.
+                                > creating the signup form to take input from the user.
+                                > 
+5. Setting up the login (page.tsx) : 
+                                > "use client" is used to make the page client side and to get the information from the frontend/client side to render at the server side. 
+                                > useState to get the user information and save it.
+                                > onLogin async function to communicate with the database.
+                                > creating the login form to take input from the user.
+                                > 
+
+6. Creating the profile (page.tsx) : 
+                                > then creating the profile [id] folder for passing the params through the parameter to open up the new profile page with an user id.
+
+7. Creating the models (userModel.js) : 
+                                > Basically it is a structure of the database that how the data will be saved in the database.
+                                > - importing mongoose which communicate with the database.
+                                  - creating the new Schema using mongoose.
+                                  - implementing fields and the verifyToken & verifyTokenExpiry, forgotPasswordToken & forgotPasswordTokenExpiry
+                                  - exporting the schema model.
+
+8. Implementing the signup  (route.ts) : 
+                                > Importing dbConfig, User (Model),{ NextRequest & NextResponse }, bcryptjs
+                                > Implementing async function for POST method using try{ } catch { } block.
+                                                          

@@ -18,10 +18,13 @@
         "name": "next"
       }
     ],
+    // "paths": {
+    //   "@styles/*, @components/*, @hooks/*": ["./src/*"]
+    // }
     "paths": {
-      "@styles/*, @components/*, @hooks/*": ["./src/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/models/userModel.js"],
   "exclude": ["node_modules"]
 }
