@@ -61,5 +61,32 @@ Steps:
 
 8. Implementing the signup  (route.ts) : 
                                 > Importing dbConfig, User (Model),{ NextRequest & NextResponse }, bcryptjs
+                                > NextRequest is used to send the request.
+                                > NextResponse is user to send the response.
                                 > Implementing async function for POST method using try{ } catch { } block.
-                                                          
+                                > try {
+                                    const reqBody = await request.json();
+                                    const { username, email, password } = reqBody;
+                                    Steps: 
+                                        // Check if user already exists.
+                                        // Get the Hashed Password.
+                                        // Saving the user.
+                                }
+                                catch {
+                                    > here we are handling the error.
+                                }
+9. Implementing the login  (route.ts) : 
+                                > Importing {connect} from dbConfig, User (Model),{ NextRequest & NextResponse }, bcryptjs, jwt (jsonwebtoken)
+                                > Implementing async function for POST method using try{ } catch { } block.
+                                > try {
+                                        const reqBody = await request.json()
+                                        const { email, password } = reqBody
+                                    Steps: 
+                                        // Check if user already exists.
+                                        // Check if password is correct.
+                                        // Create token data.
+                                        // Create token.
+                                }
+                                catch {
+                                    > here we are handling the error.
+                                }
