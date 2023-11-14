@@ -1,3 +1,4 @@
+import VerifyEmailPage from "@/app/verifyemail/page";
 import mongoose from "mongoose";
 
 export async function connect() {
